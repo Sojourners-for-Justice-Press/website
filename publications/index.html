@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sojourners for Justice Press</title>
+    <link rel="stylesheet" href="../layout/layout.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">
+            <a href="/">Sojourners for Justice Press</a></h1>
+    </header>
+
+    <nav>
+        <a href="publication-page-example.html">Publications page example</a>
+    </nav>
+
+
+    <!-- Start of the basic structure of the publications page -->
+    <main>
+        <div class="publicationList"> </div>
+    </main>
+    <!-- End of the basic structure of the publications page -->
+</body>
+<script src="../script/jquery-3.6.0.min.js"></script>
+<script src="../script/publications.js"></script>
+<script>
+    loadSheetData(function(publication) {
+        console.log(publication)
+        $('.publicationList').empty()
+        for (let index = 0; index < publication.length; index++) {
+            $('.publicationList').append(addPublicationDiv(publication[index]))
+        }
+    })
+</script>
+
+</html>
