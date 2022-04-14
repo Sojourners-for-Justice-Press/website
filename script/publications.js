@@ -1,8 +1,7 @@
 // adapted from SFPC Cocoon Website https://github.com/SFPC/cocoon
-const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT80dp5jy0gAKt5ZgUGh6x3AD6m2tvYif0njxSJi3zlFrEKk0Zr9pKuea5WUUBzy26lIK43QJ8h1XNg/pub?output=tsv"
     // load publications from google sheet, then run a callback function on the data
 
-function loadSheetData(callback) {
+function loadSheetData(sheetUrl, callback) {
     $.get(sheetUrl, function(data) {
         //data enters as TSV string, we convert it into an array of JSON objects, save it in the variable 'publications' then send to callback
         callback(TSVToJSONArray(data))
@@ -63,4 +62,11 @@ function openPage(hash) {
         location.hash = ""
         location.href = `/publications#${hash}`
     }
+}
+function hyphensToList(hyphenString, destinationSelector){
+    let list = hyphenString.split("- ")
+    $(destinationSelector).empty()
+    list.forEach(element => {
+        if(element.length > 0) $(destinationSelector).append(`<li>${element}</li>`)
+    });
 }
