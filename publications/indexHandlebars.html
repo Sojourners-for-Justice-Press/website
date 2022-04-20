@@ -9,35 +9,58 @@
     <link rel="stylesheet" href="../layout/layout.css">
     <style>
         main {
-            display: flex; 
+            display: flex;
         }
+
         .publicationDetail {
-            display:none;
-            margin-left: 5em;
-            width:600px;
-            background-color: lightblue;
-            border: 2px solid lightgray;
+            display: none;
+            margin: 0 auto;
+            padding: 1rem;
+            width: 50%;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1 class="title">
-            <a href="/">Sojourners for Justice Press</a></h1>
+        <div class="header">
+            <h1 class="title-tag">
+                <a href="/">Sojourners for Justice Press</a>
+            </h1>
+        </div>
+
+        <!-- <script>
+            const aboutTemplate = Handlebars.compile(`
+                <h1 class="sectionTitle">{{pageInfo.sectionTitle}}</h1>
+                {{#each content}}
+                    <h2 class="heading2">{{this.heading2}}</h2>
+                {{/each}}
+            `)
+        </script> -->
     </header>
-
-    <nav>
-        <a href="publication-page-example.html">Publications page example</a>
-    </nav>
-
 
     <!-- Start of the basic structure of the publications page -->
     <main>
-        <div class="publicationList"> </div>
+        <div class="publicationList"></div>
         <div class="publicationDetail"></div>
     </main>
     <!-- End of the basic structure of the publications page -->
+
+    <footer>
+        <div class="footer">
+            <div class="footer-item">
+                <ul>
+                    <li> <a href="#">Email</a> </li>
+                    <li> <a href="#">Issuu</a> </li>
+                    <li> <a href="#">Are.na</a> </li>
+                </ul>
+            </div>
+
+            <div class="footer-item">
+                <p class="copyright">Creative Commons CC BY-NC-SA 4.0</p>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script src="../script/jquery-3.6.0.min.js"></script>
@@ -45,20 +68,19 @@
 <script>
     const publicationDiv = Handlebars.compile(`
         <div class="publicationDiv" id="{{urlTitle}}">
-        <img src="../publications/asset/{{img}}" alt="{{imgAltText}}" width="150px"/>
         <p><a href="javascript:void(0)" onclick="openPage('{{urlTitle}}')"><span id="title">{{publicationTitle}}</span></a></p>
         <p>by {{author}}</p>
+        <img src="../publications/asset/{{img}}" alt="{{imgAltText}}"> <br>
         </div>
     `)
-    const publicationDetailTemplate =  Handlebars.compile(`
+    const publicationDetailTemplate = Handlebars.compile(`
         <h1 id="publicationTitle">{{publicationTitle}}</h1>
         <h2 id="publicationAuthor">{{author}}</h2>
-        <h3>{{price}}</h3>
-        <p> <a href="{{purchaseLink}}" class="purchaseLink">buy on Haymarket Books</a> · <a href="{{readLink}}" class="readLink">read on Issuu</a></p>
         <img id="publicationImg" src="asset/{{img}}" alt="{{imgAltText}}" width="200px" />
         {{#if img1}}<img id="publicationImg" src="asset/{{img1}}" alt="{{img1AltText}}" width="200px" />{{/if}}
         {{#if img2}}<img id="publicationImg" src="asset/{{img2}}" alt="{{img2AltText}}" width="200px" />{{/if}}
         {{#if img3}}<img id="publicationImg" src="asset/{{img3}}" alt="{{img3AltText}}" width="200px" />{{/if}}
+        <a class="button" href="{{purchaseLink}}">{{price}} on Haymarket Books</a> <br>
         <p id="description">
             {{description}}
         </p>   
@@ -67,27 +89,27 @@
 <script>
     let sheetData;
     let publicationData;
-    loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vT80dp5jy0gAKt5ZgUGh6x3AD6m2tvYif0njxSJi3zlFrEKk0Zr9pKuea5WUUBzy26lIK43QJ8h1XNg/pub?output=tsv", function(publications) {
+    loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vT80dp5jy0gAKt5ZgUGh6x3AD6m2tvYif0njxSJi3zlFrEKk0Zr9pKuea5WUUBzy26lIK43QJ8h1XNg/pub?output=tsv", function (publications) {
         sheetData = publications
         console.log(publications)
         $('.publicationList').empty()
         for (let index = 0; index < publications.length; index++) {
             $('.publicationList').append(publicationDiv(publications[index]))
-            if(location.hash.slice(1) && publications[index].urlTitle == location.hash.slice(1)){
+            if (location.hash.slice(1) && publications[index].urlTitle == location.hash.slice(1)) {
                 showPublicationDetail(publications[index])
             }
         }
     })
-    function findPublicationAndLoad(urlTitle){
+    function findPublicationAndLoad(urlTitle) {
         for (let index = 0; index < sheetData.length; index++) {
-            if(sheetData[index].urlTitle == urlTitle){
+            if (sheetData[index].urlTitle == urlTitle) {
                 showPublicationDetail(sheetData[index])
                 break
             }
         }
     }
 
-    function showPublicationDetail(publication){
+    function showPublicationDetail(publication) {
         $('.publicationDetail').html(publicationDetailTemplate(publication)).fadeIn()
     }
 </script>

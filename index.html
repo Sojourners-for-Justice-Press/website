@@ -10,30 +10,91 @@
 </head>
 
 <body>
-
     <header>
-        <h1 class="title"><a href="/">Sojourners for Justice Press</a></h1>
+        <div class="mural">
+            <div class="mural-img">
+                <figure>
+                    <img class="mural-img" src="asset/image/mural.jpg" alt="Sojourners for Justice Press web mural" />
+                </figure>
+            </div>
+
+            <div class="mural-item">
+                <p id="date" class="date"></p>
+                <h1 class="title"><a href="/">Sojourners for Justice Press</a></h1>
+                <p class="blurb">Sojourners for Justice Press is a micro press that opens its platform to people working
+                    experimentally with print based media. We publish short form and ephemeral zines, pamphlets, and
+                    booklets that engage do-it-yourself, black feminist,
+                    and abolitionist philosophies or visions.</p>
+                <nav>
+                    <ul>
+                        <li><a href="aboutHandlebars.html">About</a></li>
+                        <li><a href="publications/indexHandlebars.html">Publications</a></li>
+                        <li><a href="submissions.html">Submissions</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <nav>
-        <a href="about.html">About</a>
-        <a href="/publications">Publications</a>
-        <a href="submissions.html">Submissions</a>
-    </nav>
+
 
     <main>
         <div id="app">
-            <figure>
-                <img class="mural" src="publications/asset/placeholder0.png" alt="Sojourners for Justice Press web mural" />
-                <figcaption>Fig. 1, Caption</figcaption>
-            </figure>
+            <h3 class="latest">Latest from the Press</h3>
+            <div class="latest">
+                <div class="latest-item">
+                    <h4>Resurrecting Ruby: Criminalizing Black Women's Survival</h4>
+                    <img src="publications/asset/resurrecting-ruby/resurrecting-ruby.png"
+                        alt="Placeholder text">
+                </div>
+                <div class="latest-item">
+                    <h4>Our Girl Tuesday: An Unfurling for Dr. Margaret T.G. Burroughs</h4>
+                    <img src="publications/asset/our-girl-tuesday/our-girl-tuesday.png"
+                        alt="Placeholder text">
+                </div>
+                <div class="latest-item">
+                    <h4>Resurrecting Ruby: Criminalizing Black Women's Survival</h4>
+                    <img src="publications/asset/resurrecting-ruby/resurrecting-ruby.png"
+                        alt="Placeholder text">
+                </div>
+                <div class="latest-item">
+                    <h4>Our Girl Tuesday: An Unfurling for Dr. Margaret T.G. Burroughs</h4>
+                    <img src="publications/asset/our-girl-tuesday/our-girl-tuesday.png"
+                        alt="Placeholder text">
+                </div>
+            </div>
         </div>
     </main>
 
+    <footer>
+        <div class="footer">
+            <div class="footer-item">
+                <ul>
+                    <li> <a href="#">Email</a> </li>
+                    <li> <a href="#">Issuu</a> </li>
+                    <li> <a href="#">Are.na</a> </li>
+                </ul>
+            </div>
+
+            <div class="footer-item">
+                <p class="copyright">Creative Commons CC BY-NC-SA 4.0</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        window.onload = function() {
+        window.onload = function () {
             console.log("I sell the shadow to support the substance.")
         }
+
+        var options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        var today = new Date();
+        document.getElementById("date").innerHTML = today.toLocaleDateString("en-US", options);
     </script>
 </body>
 
