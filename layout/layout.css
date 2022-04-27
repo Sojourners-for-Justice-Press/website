@@ -10,6 +10,20 @@
     --color6: #995F54;
 }
 
+@font-face {
+    font-family: 'notCourierSans';
+    src: url('asset/font/NotCourierSans/NotCourierSans.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'compagnon';
+    src: url('asset/font/Compagnon/Compagnon-Script.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *,
 ::after,
 ::before {
@@ -26,7 +40,9 @@ html {
 
 body {
     background-color: var(--bg-color);
-    font-family: 'Courier New', Courier, Fixed;
+    border: 1px solid var(--txt-color);
+    margin: 7px;
+    font-family: 'notCourierSans', 'Courier New', Courier, Fixed;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -40,11 +56,16 @@ img {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+  
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: var(--txt-color);
 }
 
 .date {
     float: right;
+    padding: 1%;
 }
 
 .mural {
@@ -55,7 +76,15 @@ ul {
     margin: 5rem 5rem 0;
 }
 
-.title-tag {}
+.title-tag h1 {
+    /* Sojourners for Justice Press */
+    font-family: 'notCourierSans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 53px;
+    text-decoration-line: underline;
+}
 
 .blurb,
 nav {
@@ -84,7 +113,10 @@ nav {
 }
 
 .latest h3 {
-    font-size: 1.25rem;
+    font-family: 'compagnon';
+    font-weight: normal;
+    font-style: bold;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -133,7 +165,20 @@ img {
     max-width: 100%;
 }
 
-/* imgs on detail page */
+/* detail page */
+.publicationDetail {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: none;
+    margin: 0;
+    /* height: 100vh; */
+    padding: 1rem;
+    width: 100%;
+    /* border: 1px solid var(--txt-color); */
+    /* background-color: var(--color0); */
+}
+
 #publicationImg {
     margin: 1rem 1rem 1rem 0;
     display: inline-block;
@@ -154,7 +199,7 @@ img {
 }
 
 .carousel img {
-    width: auto !important;
+    /* width: auto !important; */
     height: 50vh;
     cursor: pointer;
 }
@@ -198,11 +243,13 @@ img {
 }
 
 .footer {
-    position: relative;
+    position: -webkit-sticky;
+    /* safari */
+    position: sticky;
     left: 0;
     bottom: 0;
     /* background: var(--color3); */
-    width: 100vw;
+    width: 100%;
     display: flex;
 }
 
@@ -210,6 +257,10 @@ img {
     width: 100%;
     margin: 2vh 2vw;
     justify-content: space-between;
+}
+
+.footer p {
+    align-self: flex-end;
 }
 
 .copyright {
