@@ -77,10 +77,10 @@
         <h1 id="publicationTitle">{{publicationTitle}}</h1>
         <h2 id="publicationAuthor">{{author}}</h2>
         <div class="carousel">
-        <img id="publicationImg" src="asset/{{img}}" alt="{{imgAltText}}" width="200px" />
-        {{#if img1}}<img id="publicationImg" src="asset/{{img1}}" alt="{{img1AltText}}" width="200px" />{{/if}}
-        {{#if img2}}<img id="publicationImg" src="asset/{{img2}}" alt="{{img2AltText}}" width="200px" />{{/if}}
-        {{#if img3}}<img id="publicationImg" src="asset/{{img3}}" alt="{{img3AltText}}" width="200px" />{{/if}}
+        <img id="publicationImg" src="asset/{{img}}" alt="{{imgAltText}}"/>
+        {{#if img1}}<img id="publicationImg" src="asset/{{img1}}" alt="{{img1AltText}}"/>{{/if}}
+        {{#if img2}}<img id="publicationImg" src="asset/{{img2}}" alt="{{img2AltText}}"/>{{/if}}
+        {{#if img3}}<img id="publicationImg" src="asset/{{img3}}" alt="{{img3AltText}}"/>{{/if}}
         </div>
         <ul class="publication-details">
             <li>Publication date: {{date}}</li>
@@ -95,9 +95,9 @@
         </p>
         <br>   
         <ul class="publication-credits">
-            <li>Author: {{author}}</li>
-            <li>Designer: <a href="{{designerLink}}">{{designer}}</a> </li>
-            <li>Cover artist: <a href="{{coverArtistLink}}">{{coverArtist}}</a> </li>
+            {{#if author}}<li>Author: {{author}}</li>{{/if}}
+            {{#if designer}}<li>Designer: <a href="{{designerLink}}">{{designer}}</a></li>{{/if}}
+            {{#if coverArtist}}<li>Cover artist: <a href="{{coverArtistLink}}">{{coverArtist}}</a></li>{{/if}}
         </ul>
     `)
 </script>

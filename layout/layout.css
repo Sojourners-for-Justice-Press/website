@@ -41,7 +41,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
+}
 
 .date {
     float: right;
@@ -55,11 +55,10 @@ ul {
     margin: 5rem 5rem 0;
 }
 
-.title-tag {
+.title-tag {}
 
-}
-
-.blurb, nav {
+.blurb,
+nav {
     margin: 0 5rem 0;
 }
 
@@ -80,11 +79,11 @@ ul {
     width: 25vw;
     height: auto;
     margin: 0.5em;
-    border: 1px solid  var(--txt-color);
+    border: 1px solid var(--txt-color);
     padding: 1rem;
 }
 
- .latest h3 {
+.latest h3 {
     font-size: 1.25rem;
     text-align: center;
 }
@@ -94,7 +93,7 @@ ul {
 }
 
 .latest-item img {
-    border: 1px solid  var(--txt-color);
+    border: 1px solid var(--txt-color);
     padding: 0.5em;
     display: block;
     margin-top: 1rem;
@@ -114,12 +113,12 @@ ul {
     width: 20vw;
     height: auto;
     margin: 0.25em;
-    border: 1px solid  var(--txt-color);
+    border: 1px solid var(--txt-color);
     padding: 1rem;
 }
 
 .publicationDiv img {
-    border: 1px solid  var(--txt-color);
+    border: 1px solid var(--txt-color);
     padding: 0.5em;
     display: block;
     margin-top: 1rem;
@@ -129,8 +128,35 @@ ul {
 
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* imgs on detail page */
 #publicationImg {
     margin: 1rem 1rem 1rem 0;
+    display: inline-block;
+    background-size: cover;
+}
+
+.carousel {
+    /* overflow-x: auto !important;
+    overflow-y: hidden !important; */
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.carousel:first-child {
+    height: 50vh !important;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: auto !important;
+    height: 50vh;
+    cursor: pointer;
 }
 
 .button-container {
@@ -144,7 +170,7 @@ ul {
     margin-top: 18px;
     flex: 5;
     align-self: flex-end;
-    
+
 }
 
 .button {
