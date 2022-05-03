@@ -110,7 +110,7 @@
             console.log(publications)
             $('#latestPublications').empty()
             for (let index = 0; index < 4; index++) {
-                $('#latestPublications').append(latestDiv(publications[index]))
+                $('#latestPublications').append(latestDiv(publications[publications.length - 1 - index]))
             }
         })
     </script>
