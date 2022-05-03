@@ -5,79 +5,85 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sojourners for Justice Press</title>
+    <title>Sojourners for Justice Press - Publications</title>
     <link rel="stylesheet" href="../layout/layout.css">
     <style>
         main {
-            display: flex; 
-        }
-        .publicationDetail {
-            display:none;
-            margin-left: 5em;
-            width:600px;
-            background-color: lightblue;
-            border: 2px solid lightgray;
+            display: flex;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1 class="title">
-            <a href="/">Sojourners for Justice Press</a></h1>
+        <div class="header">
+            <h1 class="title-tag">
+                <a href="/">Sojourners for Justice Press</a>
+            </h1>
+        </div>
+
+        <!-- <script>
+            const aboutTemplate = Handlebars.compile(`
+                <h1 class="sectionTitle">{{pageInfo.sectionTitle}}</h1>
+                {{#each content}}
+                    <h2 class="heading2">{{this.heading2}}</h2>
+                {{/each}}
+            `)
+        </script> -->
     </header>
-
-    <nav>
-        <a href="publication-page-example.html">Publications page example</a>
-    </nav>
-
 
     <!-- Start of the basic structure of the publications page -->
     <main>
-        <div class="publicationList"> </div>
+        <div class="publicationList"></div>
         <div class="publicationDetail"></div>
     </main>
     <!-- End of the basic structure of the publications page -->
+
+    <footer>
+        <div class="footer">
+            <div class="footer-item">
+                <ul>
+                    <li> <a href="#">Email</a> </li>
+                    <li> <a href="#">Issuu</a> </li>
+                    <li> <a href="#">Are.na</a> </li>
+                </ul>
+            </div>
+
+            <div class="footer-item">
+                <p class="copyright">Creative Commons CC BY-NC-SA 4.0</p>
+            </div>
+        </div>
+    </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script src="../script/jquery-3.6.0.min.js"></script>
 <script src="../script/publications.js"></script>
+<script src="publicationTemplates.js"></script>
 <script>
     let sheetData;
     let publicationData;
-    loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vT80dp5jy0gAKt5ZgUGh6x3AD6m2tvYif0njxSJi3zlFrEKk0Zr9pKuea5WUUBzy26lIK43QJ8h1XNg/pub?output=tsv", function(publications) {
+    loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vT80dp5jy0gAKt5ZgUGh6x3AD6m2tvYif0njxSJi3zlFrEKk0Zr9pKuea5WUUBzy26lIK43QJ8h1XNg/pub?output=tsv", function (publications) {
         sheetData = publications
         console.log(publications)
         $('.publicationList').empty()
         for (let index = 0; index < publications.length; index++) {
-            $('.publicationList').append(addPublicationDiv(publications[index]))
-            if(location.hash.slice(1) && publications[index].urlTitle == location.hash.slice(1)){
+            $('.publicationList').append(publicationDiv(publications[index]))
+            if (location.hash.slice(1) && publications[index].urlTitle == location.hash.slice(1)) {
                 showPublicationDetail(publications[index])
             }
         }
     })
-    function findPublicationAndLoad(urlTitle){
+    function findPublicationAndLoad(urlTitle) {
         for (let index = 0; index < sheetData.length; index++) {
-            if(sheetData[index].urlTitle == urlTitle){
+            if (sheetData[index].urlTitle == urlTitle) {
                 showPublicationDetail(sheetData[index])
                 break
             }
         }
     }
-    function showPublicationDetail(publication){
-        let publicationDetail = `
-        <h1 id="publicationTitle">${publication.publicationTitle}</h1>
-        <h2 id="publicationAuthor">${publication.author}</h2>
-        <h3>${publication.price}</h3>
-        <p> <a href="${publication.purchaseLink}" class="purchaseLink">buy on Haymarket Books</a> · <a href="${publication.readLink}" class="readLink">read on Issuu</a></p>
-        <img id="publicationImg" src="asset/${publication.img}" alt="${publication.imgAltText}" width="200px" />
-        <img id="publicationImg" src="asset/${publication.img}" alt="Additional publication image" width="200px" />
-        <img id="publicationImg" src="asset/${publication.img}" alt="Additional publication image" width="200px" />
-        <img id="publicationImg" src="asset/${publication.img}" alt="Additional publication image" width="200px" />
-        <p id="description">
-            ${publication.description}
-        </p>   
-        `
-        $('.publicationDetail').html(publicationDetail).fadeIn()
+
+    function showPublicationDetail(publication) {
+        $('.publicationDetail').html(publicationDetailTemplate(publication)).fadeIn()
     }
 </script>
 

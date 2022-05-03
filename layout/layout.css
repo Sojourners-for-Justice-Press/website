@@ -56,10 +56,13 @@ img {
 ul {
     list-style-type: none;
     margin: 0;
-  
+
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
     color: var(--txt-color);
 }
 
@@ -135,13 +138,15 @@ nav {
 
 }
 
-.publicationList {
+.publicationList,
+.eventList {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.publicationDiv {
+.publicationDiv,
+.eventDiv {
     width: 20vw;
     height: auto;
     margin: 0.25em;
@@ -149,7 +154,8 @@ nav {
     padding: 1rem;
 }
 
-.publicationDiv img {
+.publicationDiv img,
+.eventDiv img {
     border: 1px solid var(--txt-color);
     padding: 0.5em;
     display: block;
@@ -265,4 +271,9 @@ img {
 
 .copyright {
     text-align: right;
+}
+
+#loadingGif {
+    background: url("/asset/loading.gif") no-repeat;
+    width: 400px;
 }

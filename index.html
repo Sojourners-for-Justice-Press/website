@@ -27,9 +27,9 @@
                     and abolitionist philosophies or visions.</p>
                 <nav>
                     <ul>
-                        <li><a href="aboutHandlebars.html">About</a></li>
-                        <li><a href="publications/indexHandlebars.html">Publications</a></li>
-                        <li><a href="submissions.html">Submissions</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/publications">Publications</a></li>
+                        <li><a href="/submissions">Submissions</a></li>
                     </ul>
                 </nav>
             </div>
@@ -41,26 +41,22 @@
     <main>
         <div id="app">
             <h3 class="latest">Latest from the Press</h3>
-            <div class="latest">
+            <div id="latestPublications" class="latest">
                 <div class="latest-item">
                     <h4>Resurrecting Ruby: Criminalizing Black Women's Survival</h4>
-                    <img src="publications/asset/resurrecting-ruby/resurrecting-ruby.png"
-                        alt="Placeholder text">
+                    <img src="publications/asset/resurrecting-ruby/resurrecting-ruby.png" alt="Placeholder text">
                 </div>
                 <div class="latest-item">
                     <h4>Our Girl Tuesday: An Unfurling for Dr. Margaret T.G. Burroughs</h4>
-                    <img src="publications/asset/our-girl-tuesday/our-girl-tuesday.png"
-                        alt="Placeholder text">
+                    <img src="publications/asset/our-girl-tuesday/our-girl-tuesday.png" alt="Placeholder text">
                 </div>
                 <div class="latest-item">
                     <h4>Resurrecting Ruby: Criminalizing Black Women's Survival</h4>
-                    <img src="publications/asset/resurrecting-ruby/resurrecting-ruby.png"
-                        alt="Placeholder text">
+                    <img src="publications/asset/resurrecting-ruby/resurrecting-ruby.png" alt="Placeholder text">
                 </div>
                 <div class="latest-item">
                     <h4>Our Girl Tuesday: An Unfurling for Dr. Margaret T.G. Burroughs</h4>
-                    <img src="publications/asset/our-girl-tuesday/our-girl-tuesday.png"
-                        alt="Placeholder text">
+                    <img src="publications/asset/our-girl-tuesday/our-girl-tuesday.png" alt="Placeholder text">
                 </div>
             </div>
         </div>
@@ -95,6 +91,28 @@
         };
         var today = new Date();
         document.getElementById("date").innerHTML = today.toLocaleDateString("en-US", options);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="script/publications.js"></script>
+    <script>
+        const latestDiv = Handlebars.compile(`
+        <div class="latest-item" id="{{urlTitle}}">
+        <h4><a href="javascript:void(0)" onclick="openPage('{{urlTitle}}')"><span id="title">{{publicationTitle}}</span></a></h4>
+        <p>by {{author}}</p>
+        <img src="publications/asset/{{img}}" alt="{{imgAltText}}"> 
+        </div>
+        `)
+    </script>
+    <script>
+        loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vT80dp5jy0gAKt5ZgUGh6x3AD6m2tvYif0njxSJi3zlFrEKk0Zr9pKuea5WUUBzy26lIK43QJ8h1XNg/pub?output=tsv", function (publications) {
+            sheetData = publications
+            console.log(publications)
+            $('#latestPublications').empty()
+            for (let index = 0; index < 4; index++) {
+                $('#latestPublications').append(latestDiv(publications[index]))
+            }
+        })
     </script>
 </body>
 

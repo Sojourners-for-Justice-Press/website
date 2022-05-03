@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sojourners for Justice Press - Events</title>
+  <link rel="stylesheet" href="../layout/layout.css">
+  <style>
+    main {
+      display: flex;
+    }
+
+    .eventDiv img {
+      border: none;
+      max-width: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <h1 class="title-tag">
+        <a href="/">Sojourners for Justice Press</a>
+      </h1>
+    </div>
+  </header>
+
+  <!-- Start of the basic structure of the publications page -->
+  <main>
+    <div class="eventList">
+      <div id="loadingGif"></div>
+    </div>
+  </main>
+  <!-- End of the basic structure of the publications page -->
+
+  <footer>
+    <div class="footer">
+      <div class="footer-item">
+        <ul>
+          <li> <a href="#">Email</a> </li>
+          <li> <a href="#">Issuu</a> </li>
+          <li> <a href="#">Are.na</a> </li>
+        </ul>
+      </div>
+
+      <div class="footer-item">
+        <p class="copyright">Creative Commons CC BY-NC-SA 4.0</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="../script/jquery-3.6.0.min.js"></script>
+<script src="../script/publications.js"></script>
+<script>
+  const eventDiv = Handlebars.compile(`
+        <div class="eventDiv"">
+        <h3>{{eventTitle}}</h3>
+        <p id="eventDate">{{eventDate}}</p>
+        <p><a href="{{eventLink}}">{{eventLinkTitle}}</p>
+        <img src="asset/{{img}}" alt="{{imgAltText}}"></a> <br>
+        </div>
+    `)
+</script>
+<script>
+  loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vRO1NJry3UZ38u2Fk6U3RIZfy7WWQ611lTEwHHE0p4NHLn-yg0zl_qum1_vgX-4bB5loS15s2J1DFlu/pub?gid=1744381431&single=true&output=tsv", function (events) {
+    $('.eventList').empty()
+    for (let index = 0; index < events.length; index++) {
+      $('.eventList').append(eventDiv(events[index]))
+    }
+  })
+
+</script>
+
+</html>
