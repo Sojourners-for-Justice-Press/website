@@ -16,7 +16,7 @@ const publicationDetailTemplate = Handlebars.compile(`
 </div>
 <ul class="publication-details">
     <li>Publication date: {{date}}</li>
-    <li>Pages: {{pages}}</li>
+    <li>Page Count: {{pages}}</li>
     <li>Dimensions: {{dimensions}}</li>
     <li>Category: {{category}}</li>
     <li>Price: {{price}}</li>
