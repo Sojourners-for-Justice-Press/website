@@ -1,6 +1,7 @@
 :root {
     --bg-color: #E7D9CA;
-    --txt-color: black;
+    --text-color1: var(--color6);
+    --text-color2: black;
     --color0: #F3C3B1;
     --color1: #F1422C;
     --color2: #B4992D;
@@ -8,18 +9,42 @@
     --color4: #B3C4D1;
     --color5: #3A0605;
     --color6: #995F54;
+    --date-text: calc(8px + 0.5vw);
+    --latest-text: calc(25px + 0.5vw);
+    --latest-line-height: 3;
+    --header-text: calc(20px + 0.5vw);
+    --header2-line-height: 2;
+    --body-text: calc(15px + 0.5vw);
+    --body-line-height: 1.125;
+    --publication-card-title-text: calc(18px + 0.5vw);
+    --publication-card-line-height: 0.5;
+    --publication-title-text: calc(17px + 0.5vw)
 }
 
 @font-face {
-    font-family: 'notCourierSans';
-    src: url('asset/font/NotCourierSans/NotCourierSans.otf');
+    font-family: 'Times Mono Regular';
+    src: url('asset/font/Hershey-Noailles/Hershey-Noailles-Times-Mono-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'compagnon';
-    src: url('asset/font/Compagnon/Compagnon-Script.otf');
+    font-family: 'Old French Bold';
+    src: url('asset/font/Hershey-Noailles/Hershey-Noailles-OldFrench-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Simplex Regular';
+    src: url('asset/font/Hershey-Noailles/Hershey-Noailles-Futura-Simplex-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Times Triplex Italic Regular';
+    src: url('asset/font/Hershey-Noailles/Hershey-Noailles-Times-Triplex-Italic-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }
@@ -40,9 +65,12 @@ html {
 
 body {
     background-color: var(--bg-color);
-    border: 1px solid var(--txt-color);
+    border: 1px solid var(--text-color2);
     margin: 7px;
-    font-family: 'notCourierSans', 'Courier New', Courier, Fixed;
+    font-family: 'Old French Bold', 'Courier New', Courier, Fixed;
+    font-size: var(--body-text);
+    /* color: var(--text-color2); */
+    line-height: var(--body-line-height);
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -63,10 +91,14 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-    color: var(--txt-color);
+    color: var(--text-color2);
+    text-decoration: none;
 }
 
 .date {
+    font-family: 'Courier New', Courier, fixed !important;
+    font-size: var(--date-text);
+    color: var(--text-color2);
     float: right;
     padding: 1%;
 }
@@ -81,12 +113,65 @@ a:active {
 
 .title-tag h1 {
     /* Sojourners for Justice Press */
-    font-family: 'notCourierSans';
+    font-family: 'Hershey-Noailles-Times-Mono-Regular', Times, serif;
     font-style: normal;
     font-weight: normal;
+    color: var(--text-color1);
     font-size: 40px;
     line-height: 53px;
-    text-decoration-line: underline;
+    text-decoration: underline !important;
+}
+
+#title {
+    font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: var(--publication-card-title-text);
+    line-height: var(--publication-card-line-height);
+    color: var(--text-color1);
+    text-decoration: none;
+}
+
+h2 .heading2 {
+    line-height: var(--header2-line-height)
+}
+
+nav {
+    color: var(--text-color1);
+}
+
+.dropdown {
+    z-index: 1000;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
+    color: var(--text-color1);
+    padding: 10px 10px;
+}
+
+.dropdown-content {
+    font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
+    display: none;
+    position: absolute;
+    background-color: var(--color0);
+    border: 1px solid var(--text-color2);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.arrow::after {
+    content: "\25be"
+
+}
+
+.sub-index {
+    padding: 10px;
 }
 
 .blurb,
@@ -107,28 +192,25 @@ nav {
     justify-content: center;
 }
 
+#latest {
+    font-family: 'Times Triplex Italic Regular' !important;
+    font-weight: normal;
+    font-style: bold;
+    font-size: var(--latest-text);
+    line-height: var(--latest-line-height);
+    text-align: center;
+}
+
 .latest-item {
     width: 25vw;
     height: auto;
     margin: 0.5em;
-    border: 1px solid var(--txt-color);
+    border: 1px solid var(--text-color2);
     padding: 1rem;
 }
 
-.latest h3 {
-    font-family: 'compagnon';
-    font-weight: normal;
-    font-style: bold;
-    font-size: 2rem;
-    text-align: center;
-}
-
-.latest h4 {
-    font-size: 1.25rem;
-}
-
 .latest-item img {
-    border: 1px solid var(--txt-color);
+    border: 1px solid var(--text-color2);
     padding: 0.5em;
     display: block;
     margin-top: 1rem;
@@ -136,6 +218,27 @@ nav {
     margin-right: auto;
     max-width: 40%;
 
+}
+
+.loading p span {
+    animation: type 8s steps(60, end);
+
+    @keyframes type {
+        from {
+            width: 0;
+        }
+    }
+
+    @keyframes cursor-blink {
+        0% {
+            opacity: 0;
+        }
+    }
+}
+
+.loading p::after {
+    content: "...";
+    animation: cursor-blink 1.5s steps(2) infinite;
 }
 
 .publicationList,
@@ -150,21 +253,29 @@ nav {
     width: 20vw;
     height: auto;
     margin: 0.25em;
-    border: 1px solid var(--txt-color);
+    border: 1px solid var(--text-color2);
     padding: 1rem;
 }
 
 .publicationDiv img,
 .eventDiv img {
-    border: 1px solid var(--txt-color);
+    border: 1px solid var(--text-color2);
     padding: 0.5em;
     display: block;
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 40%;
+    max-width: 45%;
 
 }
+
+/* h1 {
+    font-size: var(--header-text);
+} */
+
+/* .publicationTitle {
+    font-size: var(--publication-title-text);
+} */
 
 img {
     display: block;
@@ -181,7 +292,7 @@ img {
     /* height: 100vh; */
     padding: 1rem;
     width: 100%;
-    /* border: 1px solid var(--txt-color); */
+    /* border: 1px solid var(--text-color2); */
     /* background-color: var(--color0); */
 }
 
@@ -211,37 +322,35 @@ img {
 }
 
 .button-container {
+    outline: none;
     display: flex;
     flex-flow: row wrap;
     width: 100%;
     text-align: center;
-}
-
-.button-items {
-    margin-top: 18px;
-    flex: 5;
-    align-self: flex-end;
-
+    justify-content: flex-end;
 }
 
 .button {
+    font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
+    color: var(--text-color1);
     display: block;
     width: 100%;
     margin: 10px 10px 10px 0px;
     padding: 7px 25px 7px 25px;
     background-color: var(--color4) !important;
-    border: 1px solid var(--txt-color);
+    border: 1px solid var(--text-color2);
     border-radius: 5px;
     text-align: center;
     /* align-items: flex-end; */
 }
 
 .button:link {
-    color: var(--txt-color);
+    color: var(--text-color2);
     text-decoration: none;
 }
 
 .header {
+    display: flex;
     position: relative;
     left: 0;
     top: 0;
@@ -249,6 +358,8 @@ img {
 }
 
 .footer {
+    margin-top: 2%;
+    background-color: var(--color4);
     position: -webkit-sticky;
     /* safari */
     position: sticky;
@@ -259,14 +370,17 @@ img {
     display: flex;
 }
 
+.header-item,
 .footer-item {
     width: 100%;
     margin: 2vh 2vw;
     justify-content: space-between;
+
 }
 
 .footer p {
-    align-self: flex-end;
+    margin-bottom: auto;
+    justify-content: flex-end;
 }
 
 .copyright {

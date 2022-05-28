@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sojourners for Justice Press - Publications</title>
+    <title>Sojourners for Justice Press Publications</title>
     <link rel="stylesheet" href="../layout/layout.css">
     <style>
         main {
@@ -17,43 +17,43 @@
 <body>
     <header>
         <div class="header">
-            <h1 class="title-tag">
-                <a href="/">Sojourners for Justice Press</a>
-            </h1>
-        </div>
+            <div class="header-item">
+                <h1 class="title-tag">
+                    <a href="/">Sojourners for Justice Press</a>
+                </h1>
+            </div>
 
-        <!-- <script>
-            const aboutTemplate = Handlebars.compile(`
-                <h1 class="sectionTitle">{{pageInfo.sectionTitle}}</h1>
-                {{#each content}}
-                    <h2 class="heading2">{{this.heading2}}</h2>
-                {{/each}}
-            `)
-        </script> -->
+            <div class="header-item">
+                <div class="button-container">
+                    <div class="dropdown">
+                        <p>Now viewing: 
+                            <span class="dropdown-button">
+                            Publications <span class="arrow"></span>
+                            </span>
+                        </p>
+                 
+                        <div class="dropdown-content">
+                            <ul>
+                                <li><a href="/">Index</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/submissions">Submissions</a></li>
+                                <li> <a href="#">Email</a> </li>
+                                <li> <a href="#">Issuu</a> </li>
+                                <li> <a href="#">Are.na</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Start of the basic structure of the publications page -->
     <main>
-        <div class="publicationList"></div>
+        <div class="publicationList">
+            <p class="loading">I sell the shadow to support the substance</p>
+        </div>
         <div class="publicationDetail"></div>
     </main>
-    <!-- End of the basic structure of the publications page -->
-
-    <footer>
-        <div class="footer">
-            <div class="footer-item">
-                <ul>
-                    <li> <a href="#">Email</a> </li>
-                    <li> <a href="#">Issuu</a> </li>
-                    <li> <a href="#">Are.na</a> </li>
-                </ul>
-            </div>
-
-            <div class="footer-item">
-                <p class="copyright">Creative Commons CC BY-NC-SA 4.0</p>
-            </div>
-        </div>
-    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script src="../script/jquery-3.6.0.min.js"></script>
