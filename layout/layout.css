@@ -143,6 +143,7 @@ nav {
     z-index: 1000;
     position: relative;
     display: inline-block;
+    cursor: context-menu;
 }
 
 .dropdown-button {
@@ -163,6 +164,7 @@ nav {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    cursor: context-menu;
 }
 
 .arrow::after {
