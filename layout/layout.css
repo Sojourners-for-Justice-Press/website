@@ -137,6 +137,7 @@ a:active {
     font-weight: bold;
     font-size: var(--publication-card-title-text);
     line-height: var(--publication-card-line-height);
+    word-break: break-word;
     color: var(--text-color1);
     text-decoration: none;
 }
@@ -166,7 +167,7 @@ nav {
     font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
     display: none;
     position: absolute;
-    background-color: var(--color0);
+    background-color: var(--color3);
     border: 1px solid var(--text-color2);
     border-radius: 5px;
     width: 100%;
@@ -230,6 +231,7 @@ nav {
     height: auto;
     margin: 0.5em;
     border: 1px solid var(--text-color2);
+    border-radius: 3.25px;
     padding: 1rem;
 }
 
@@ -240,7 +242,7 @@ nav {
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 40%;
+    max-width: 65%;
 
 }
 
@@ -272,24 +274,27 @@ nav {
     flex-wrap: wrap;
 }
 
+/* outer border */
 .publicationDiv,
 .eventDiv {
     width: 20vw;
     height: auto;
     margin: 0.25em;
     border: 1px solid var(--text-color2);
+    border-radius: 3.25px;
     padding: 1rem;
 }
 
+/* inner border */
 .publicationDiv img,
 .eventDiv img {
-    border: 1px solid var(--text-color2);
+    border: 1.125px solid var(--text-color2);
     padding: 0.5em;
     display: block;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 45%;
+    max-width: calc(65% + 0.5vw);
 
 }
 
@@ -315,10 +320,12 @@ img {
     display: none;
     margin: 0;
     /* height: 100vh; */
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
-    /* border: 1px solid var(--text-color2); */
-    /* background-color: var(--color0); */
+    border-top: 1px solid var(--text-color2);
+    border-left: 1px solid var(--text-color2);
+    border-radius: 15px 0px 0px 15px;
+    background-color: var(--color0);
 }
 
 #publicationImg {
@@ -385,13 +392,12 @@ img {
 
 .footer {
     margin-top: 2%;
-    background-color: var(--color4);
+    /* background-color: var(--color4); */
     position: -webkit-sticky;
     /* safari */
     position: sticky;
     left: 0;
     bottom: 0;
-    /* background: var(--color3); */
     width: 100%;
     display: flex;
 }
@@ -411,6 +417,7 @@ img {
 
 .copyright {
     text-align: right;
+    vertical-align: bottom;
 }
 
 #loadingGif {

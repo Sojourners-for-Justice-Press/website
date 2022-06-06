@@ -37,9 +37,9 @@
                                 <li><a href="/">Index</a></li>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/submissions">Submissions</a></li>
-                                <li> <a href="#">Email</a> </li>
-                                <li> <a href="#">Issuu</a> </li>
-                                <li> <a href="#">Are.na</a> </li>
+                                <li> <a href="#">Email</a></li>
+                                <li> <a href="#">Issuu</a></li>
+                                <li> <a href="#">Are.na</a></li>
                             </ul>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
     }
 
     function showPublicationDetail(publication) {
-        $('.publicationDetail').html(publicationDetailTemplate(publication)).fadeIn()
+        $('.publicationDetail').html(publicationDetailTemplate(publication)).animate({width:'toggle'},650);
     }
 </script>
 
