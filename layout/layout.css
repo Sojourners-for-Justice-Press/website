@@ -17,7 +17,7 @@
     --body-text: calc(15px + 0.5vw);
     --body-line-height: 1.125;
     --publication-card-title-text: calc(18px + 0.5vw);
-    --publication-card-line-height: 0.5;
+    --publication-card-line-height: 0.1;
     --publication-title-text: calc(17px + 0.5vw);
     --close: calc(13px + 0.5vw);
 }
@@ -244,7 +244,7 @@ nav {
 
 }
 
-.loading p span {
+.loading {
     animation: type 8s steps(60, end);
 
     @keyframes type {
@@ -260,9 +260,9 @@ nav {
     }
 }
 
-.loading p::after {
-    content: "...";
-    animation: cursor-blink 1.5s steps(2) infinite;
+.loading::after {
+    content: "\2026";
+    animation: cursor-blink 1.5s steps(3) infinite;
 }
 
 .publicationList,
@@ -344,7 +344,7 @@ img {
 .carousel img {
     /* width: auto !important; */
     height: 50vh;
-    cursor: pointer;
+    cursor: url(asset/right-cursor.png), pointer;
 }
 
 .button-container {
