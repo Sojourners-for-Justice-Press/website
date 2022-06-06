@@ -274,6 +274,7 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 /* outer border */
@@ -281,7 +282,7 @@ nav {
 .eventDiv {
     width: 20vw;
     height: auto;
-    margin: 0.25em;
+    margin: 0.5em;
     border: 1px solid var(--text-color2);
     border-radius: 3.25px;
     padding: 1rem;
