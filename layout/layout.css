@@ -148,6 +148,8 @@ h2 .heading2 {
 
 nav {
     color: var(--text-color1);
+    font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
+    font-size: var(--publication-title-text)
 }
 
 .dropdown {
