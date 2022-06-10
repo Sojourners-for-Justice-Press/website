@@ -62,7 +62,7 @@
 <script>
     let sheetData;
     let publicationData;
-    loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vT80dp5jy0gAKt5ZgUGh6x3AD6m2tvYif0njxSJi3zlFrEKk0Zr9pKuea5WUUBzy26lIK43QJ8h1XNg/pub?output=tsv", function (publications) {
+    loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vRO1NJry3UZ38u2Fk6U3RIZfy7WWQ611lTEwHHE0p4NHLn-yg0zl_qum1_vgX-4bB5loS15s2J1DFlu/pub?gid=1718289432&single=true&output=tsv", function (publications) {
         sheetData = publications
         console.log(publications)
         $('.publicationList').empty()
@@ -83,7 +83,11 @@
     }
 
     function showPublicationDetail(publication) {
-        $('.publicationDetail').html(publicationDetailTemplate(publication)).animate({width:'toggle'},450);
+        $('.publicationDetail').html(publicationDetailTemplate(publication))
+        $('.publicationDetail').animate({ width: 'show' }, 450);
+    }
+    function hidePublicationDetail() {
+        $('.publicationDetail').animate({ width: 'toggle' }, 450);
     }
 </script>
 

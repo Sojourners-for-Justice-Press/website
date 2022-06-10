@@ -14,7 +14,8 @@
         <div class="mural">
             <div class="mural-img">
                 <figure>
-                    <img class="mural-img" src="layout/asset/image/mural.jpg" alt="Sojourners for Justice Press web mural" />
+                    <img class="mural-img" src="layout/asset/image/mural.jpg"
+                        alt="Sojourners for Justice Press web mural" />
                 </figure>
             </div>
 
@@ -46,10 +47,10 @@
 
             <div id="latestPublications" class="latest">
                 <div class="latest-item">
-                   <p class="loading">I sell the shadow to support the substance</p>
+                    <p class="loading">I sell the shadow to support the substance</p>
                 </div>
             </div>
-<!-- 
+            <!-- 
             <div class="latest-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/xK9-9JzgLGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/X6A66WHUIUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -100,7 +101,7 @@
         `)
     </script>
     <script>
-        loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vT80dp5jy0gAKt5ZgUGh6x3AD6m2tvYif0njxSJi3zlFrEKk0Zr9pKuea5WUUBzy26lIK43QJ8h1XNg/pub?output=tsv", function (publications) {
+        loadSheetData("https://docs.google.com/spreadsheets/d/e/2PACX-1vRO1NJry3UZ38u2Fk6U3RIZfy7WWQ611lTEwHHE0p4NHLn-yg0zl_qum1_vgX-4bB5loS15s2J1DFlu/pub?gid=1718289432&single=true&output=tsv", function (publications) {
             sheetData = publications
             console.log(publications)
             $('#latestPublications').empty()
