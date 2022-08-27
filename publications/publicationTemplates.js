@@ -6,7 +6,7 @@ const publicationDiv = Handlebars.compile(`
 </div>
 `)
 const publicationDetailTemplate = Handlebars.compile(`
-<a href="javascript:void(0)" onclick="close('{{urlTitle}}')"><span class="close"></span></a>
+<a href="javascript:void(0)" onclick="hidePublicationDetail()"><span class="close"></span></a>
 <h1 id="publicationTitle">{{publicationTitle}}</h1>
 <h2 id="publicationAuthor">{{author}}</h2>
 <div class="carousel">
