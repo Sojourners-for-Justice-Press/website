@@ -1,17 +1,18 @@
 :root {
-    --bg-color: #E7D9CA;
+    --bg-color: #F6EDE3;
     --text-color1: var(--color6);
-    --text-color2: black;
+    --text-color2:#3D4538;
     --color0: #F3C3B1;
-    --color1: #F1422C;
-    --color2: #B4992D;
-    --color3: #6B69B5;
+    --color1: #EC9287;
+    --color2: #DCCA82;
+    --color3: #A9A7EB;
     --color4: #B3C4D1;
     --color5: #3A0605;
     --color6: #995F54;
     --date-text: calc(8px + 0.5vw);
-    --latest-text: calc(25px + 0.5vw);
+    --latest-text: calc(22px + 0.5vw);
     --latest-line-height: 3;
+    --loading-text: calc(40px + 0.5vw);
     --header-text: calc(20px + 0.5vw);
     --header2-line-height: 2;
     --body-text: calc(15px + 0.5vw);
@@ -66,11 +67,12 @@ html {
 
 body {
     background-color: var(--bg-color);
-    border: 1px solid var(--text-color2);
-    margin: 7px;
-    font-family: 'Old French Bold', 'Courier New', Courier, Fixed;
+    border-top: 1px dashed var(--text-color2);
+    border-bottom: 1px dashed var(--text-color2);
+    margin: 10px;
+    font-family: 'Futura Simplex Regular', 'Times New Roman', Times, serif;
     font-size: var(--body-text);
-    /* color: var(--text-color2); */
+    color: var(--text-color2);
     line-height: var(--body-line-height);
     display: flex;
     flex-direction: column;
@@ -126,10 +128,11 @@ a:active {
     font-family: 'Hershey-Noailles-Times-Mono-Regular', Times, serif;
     font-style: normal;
     font-weight: normal;
-    color: var(--text-color1);
+    color: var(--text-color);
     font-size: 40px;
     line-height: 53px;
     text-decoration: underline !important;
+    margin: 5rem 5rem 0;
 }
 
 #title {
@@ -138,7 +141,7 @@ a:active {
     font-size: var(--publication-card-title-text);
     line-height: var(--publication-card-line-height);
     word-break: break-word;
-    color: var(--text-color1);
+    color: var(--text-color2);
     text-decoration: none;
 }
 
@@ -149,7 +152,14 @@ h2 .heading2 {
 nav {
     color: var(--text-color1);
     font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
-    font-size: var(--publication-title-text)
+    font-size: var(--publication-title-text);
+    border-bottom: 1px dashed var(--text-color2);
+    text-align: center;
+    padding: 10px 10px;
+}
+
+table {
+    width: 100%;
 }
 
 .dropdown {
@@ -161,18 +171,21 @@ nav {
 
 .dropdown-button {
     font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
+    font-size: var(--publication-title-text);
     color: var(--text-color1);
     padding: 10px 10px;
 }
 
 .dropdown-content {
     font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
+    font-size: var(--publication-title-text);
     display: none;
     position: absolute;
-    background-color: var(--color3);
-    border: 1px solid var(--text-color2);
-    border-radius: 5px;
+    background-color: var(--bg-color);
+    border-top: 1px dashed var(--text-color2);
+    border-bottom: 1px dashed var(--text-color2);
     width: 100%;
+    padding: 10px 10px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -201,8 +214,8 @@ nav {
     padding: 10px;
 }
 
-.blurb,
-nav {
+.blurb {
+    /* use if title is above nav */
     margin: 0 5rem 0;
 }
 
@@ -220,9 +233,12 @@ nav {
 }
 
 #latest {
-    font-family: 'Times Triplex Italic Regular' !important;
-    font-weight: normal;
-    font-style: bold;
+     /* font-family: 'Times Triplex Italic Regular' !important; */
+    font-family: 'Courier New', Courier, Fixed;
+    /* font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif; */
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-weight: bolder;
     font-size: var(--latest-text);
     line-height: var(--latest-line-height);
     text-align: center;
@@ -232,13 +248,13 @@ nav {
     width: 25vw;
     height: auto;
     margin: 0.5em;
-    border: 1px solid var(--text-color2);
-    border-radius: 3.25px;
+    border-left: 1px dashed var(--text-color2);
+    border-right: 1px dashed var(--text-color2);
     padding: 1rem;
 }
 
 .latest-item img {
-    border: 1px solid var(--text-color2);
+    /* border: 1px dashed var(--text-color2); */
     padding: 0.5em;
     display: block;
     margin-top: 1rem;
@@ -249,19 +265,7 @@ nav {
 }
 
 .loading {
-    animation: type 8s steps(60, end);
-
-    @keyframes type {
-        from {
-            width: 0;
-        }
-    }
-
-    @keyframes cursor-blink {
-        0% {
-            opacity: 0;
-        }
-    }
+    font-size: var(--loading-text);
 }
 
 .loading::after {
@@ -283,7 +287,8 @@ nav {
     width: 20vw;
     height: auto;
     margin: 0.5em;
-    border: 1px solid var(--text-color2);
+    border-left: 1px dashed var(--text-color2);
+    border-right: 1px dashed var(--text-color2);
     border-radius: 3.25px;
     padding: 1rem;
 }
@@ -291,7 +296,7 @@ nav {
 /* inner border */
 .publicationDiv img,
 .eventDiv img {
-    border: 1.125px solid var(--text-color2);
+    /* border: 1.125px solid var(--text-color2); */
     padding: 0.5em;
     display: block;
     margin-top: 1.25rem;
@@ -325,10 +330,8 @@ img {
     /* height: 100vh; */
     padding: 2rem;
     width: 100%;
-    border-top: 1px solid var(--text-color2);
-    border-left: 1px solid var(--text-color2);
-    border-radius: 15px 0px 0px 15px;
-    background-color: var(--color0);
+    border-top: 1px dashed var(--text-color2);
+    /* background-color: var(--color2); */
 }
 
 #publicationImg {
@@ -374,7 +377,7 @@ img {
     margin: 10px 10px 10px 0px;
     padding: 7px 25px 7px 25px;
     background-color: var(--color4) !important;
-    border: 1px solid var(--text-color2);
+    border: 1px dashed var(--text-color2);
     border-radius: 5px;
     text-align: center;
     /* align-items: flex-end; */
@@ -403,6 +406,7 @@ img {
     bottom: 0;
     width: 100%;
     display: flex;
+    border-top: 1px dashed var(--text-color2);
 }
 
 .header-item,
