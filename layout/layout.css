@@ -217,6 +217,7 @@ table {
 .blurb {
     /* use if title is above nav */
     margin: 0 5rem 0;
+    padding-bottom: 3vh;
 }
 
 .mural-img {
@@ -225,6 +226,12 @@ table {
 
 .mural-item {
     width: 50%;
+}
+
+hr {
+    border-top: 1px dashed var(--text-color2);
+    width: 15%;
+    margin: auto;
 }
 
 .latest {
