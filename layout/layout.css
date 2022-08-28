@@ -20,7 +20,7 @@
     --publication-card-title-text: calc(18px + 0.5vw);
     --publication-card-line-height: 0.1;
     --publication-title-text: calc(17px + 0.5vw);
-    --close: calc(13px + 0.5vw);
+    --close: calc(35px + 0.5vw);
 }
 
 @font-face {
@@ -198,7 +198,7 @@ table {
 }
 
 .close::after {
-    content: "\2573"
+    content: "\21e2"
 }
 
 .close {
@@ -217,7 +217,7 @@ table {
 .blurb {
     /* use if title is above nav */
     margin: 0 5rem 0;
-    padding-bottom: 3vh;
+    padding-bottom: 5vh;
 }
 
 .mural-img {
