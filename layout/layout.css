@@ -300,9 +300,8 @@ hr {
 .publicationList,
 .eventList {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
 }
 
 /* outer border */
@@ -353,11 +352,9 @@ img {
     right: 0;
     display: none;
     margin: 0;
-    /* height: 100vh; */
     padding: 2rem;
-    /* width: 100%; */
+    max-width: 50%;
     border-top: 1px dashed var(--text-color2);
-    /* background-color: var(--color2); */
 }
 
 #publicationImg {
