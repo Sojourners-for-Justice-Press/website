@@ -252,12 +252,14 @@ hr {
 }
 
 .latest-item {
+    flex-grow: 2;
     width: 25vw;
     height: auto;
     margin: 0.5em;
     border-left: 1px dashed var(--text-color2);
     border-right: 1px dashed var(--text-color2);
     padding: 1rem;
+    
 }
 
 .latest-item img {
@@ -277,7 +279,6 @@ hr {
 
 .loading::after {
     content: "\2026";
-    animation: cursor-blink 1.5s steps(3) infinite;
 }
 
 .publicationList,
@@ -296,7 +297,6 @@ hr {
     margin: 0.5em;
     border-left: 1px dashed var(--text-color2);
     border-right: 1px dashed var(--text-color2);
-    border-radius: 3.25px;
     padding: 1rem;
 }
 
