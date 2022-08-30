@@ -300,7 +300,8 @@ hr {
 .publicationList,
 .eventList {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
 }
 
