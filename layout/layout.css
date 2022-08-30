@@ -9,7 +9,7 @@
     --color4: #B3C4D1;
     --color5: #3A0605;
     --color6: #995F54;
-    --date-text: calc(8px + 0.5vw);
+    --logo-text: calc(12px + 0.5vw);
     --latest-text: calc(22px + 0.5vw);
     --latest-line-height: 3;
     --loading-text: calc(40px + 0.5vw);
@@ -107,12 +107,28 @@ a:active {
     text-decoration: none;
 }
 
+
+p a:hover {
+    transition: all 0.5s ease;
+    font-family:'Courier New', Courier, monospace;
+    
+}
+
 .date {
     font-family: 'Courier New', Courier, fixed !important;
     font-size: var(--date-text);
     color: var(--text-color2);
     float: right;
     padding: 1%;
+}
+
+.logo {
+    font-family: 'Courier New', Courier, monospace !important;
+    color: var(--color6);
+    font-size: var(--logo-text);
+    position: relative;
+    top: 1vw;
+    left: -1vw;
 }
 
 .mural {
@@ -140,7 +156,6 @@ a:active {
     font-weight: bold;
     font-size: var(--publication-card-title-text);
     line-height: var(--publication-card-line-height);
-    word-break: break-word;
     color: var(--text-color2);
     text-decoration: none;
 }
@@ -156,6 +171,9 @@ nav {
     border-bottom: 1px dashed var(--text-color2);
     text-align: center;
     padding: 10px 10px;
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
 }
 
 table {
@@ -182,9 +200,8 @@ table {
     display: none;
     position: absolute;
     background-color: var(--bg-color);
-    border-top: 1px dashed var(--text-color2);
     border-bottom: 1px dashed var(--text-color2);
-    width: 100%;
+    min-width: 100%;
     padding: 10px 10px;
 }
 
@@ -215,7 +232,6 @@ table {
 }
 
 .blurb {
-    /* use if title is above nav */
     margin: 0 5rem 0;
     padding-bottom: 5vh;
 }
@@ -284,15 +300,17 @@ hr {
 .publicationList,
 .eventList {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: row-reverse;
 }
 
 /* outer border */
 .publicationDiv,
 .eventDiv {
-    width: 20vw;
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 18vw;
     height: auto;
     margin: 0.5em;
     border-left: 1px dashed var(--text-color2);
@@ -329,6 +347,7 @@ img {
 
 /* detail page */
 .publicationDetail {
+    flex-grow: 2;
     position: relative;
     top: 0;
     right: 0;
@@ -336,7 +355,7 @@ img {
     margin: 0;
     /* height: 100vh; */
     padding: 2rem;
-    width: 100%;
+    /* width: 100%; */
     border-top: 1px dashed var(--text-color2);
     /* background-color: var(--color2); */
 }
@@ -432,9 +451,4 @@ img {
 .copyright {
     text-align: right;
     vertical-align: bottom;
-}
-
-#loadingGif {
-    background: url("/asset/loading.gif") no-repeat;
-    width: 400px;
 }
