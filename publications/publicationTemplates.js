@@ -29,7 +29,7 @@ const publicationDetailTemplate = Handlebars.compile(`
     {{#if designer}}<li>Designer: <a href="{{designerLink}}">{{designer}}</a></li>{{/if}}
     {{#if coverArtist}}<li>Cover artist: <a href="{{coverArtistLink}}">{{coverArtist}}</a></li>{{/if}}
     {{#if printer}}<li>Printer: <a href="{{printerLink}}">{{printer}}</a></li>{{/if}}
-    {{#if readLink}}<li>Digital copy: <a href="{{readLink}}">Accessible via {{readLinkTitle}}</a></li>{{/if}}
+    {{#if readLink}}<li>Digital version: <a href="{{readLink}}">Accessible via {{readLinkTitle}}</a></li>{{/if}}
     <li>Category: {{category}}</li>
     <li>Language: {{language}}</li>
     <li>Date: {{date}}</li>
