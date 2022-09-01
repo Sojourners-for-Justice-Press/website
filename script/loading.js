@@ -5,8 +5,8 @@ var sentences = ['I sell the shadow to support the substance...','I sell the sha
             len = sentences.length,
             forwards = true,
             skip_count = 0,
-            skip_delay = 5,
-            speed = 12;
+            skip_delay = 7,
+            speed = 25;
         var wordflick = function () {
             setInterval(function () {
                 if (forwards) {
