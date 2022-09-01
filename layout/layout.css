@@ -343,6 +343,10 @@ img {
     cursor: url(asset/right-cursor.png), pointer;
 }
 
+.publication-credits {
+    margin-top: 2rem;
+}
+
 .button-container {
     outline: none;
     display: flex;
