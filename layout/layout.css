@@ -389,7 +389,7 @@ main {
     left: 0;
     bottom: 0;
     margin: 10px 10px 0px 10px;
-    width: 95vw;
+    width: 999vw;
     height: auto;
     border-top: 1px dashed var(--text-color2);
     background-color: var(--bg-color);
@@ -451,7 +451,6 @@ main {
         max-width: 80vw;
     }
 
-
     .dropdown {
         min-width: 100%;
     }
@@ -466,5 +465,9 @@ main {
         min-width: 100vw;
         height: 100%;
         border-bottom: 1px dashed var(--text-color2);
+    }
+
+    footer {
+        width: 95vw;
     }
 }
