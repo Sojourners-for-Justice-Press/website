@@ -467,11 +467,13 @@ img {
     }
 
     .publicationDetail {
-        z-index: 100;
+        z-index: 1000;
         background-color: var(--bg-color);
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         min-width: 100vw;
+        height: auto;
+        border-bottom: 1px dashed var(--text-color2);
     }
 }
