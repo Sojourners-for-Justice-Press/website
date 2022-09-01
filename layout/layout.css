@@ -384,16 +384,16 @@ main {
 }
 
 .footer {
-    margin: 10px 10px 0px 10px;
-    height: auto;
-    background-color: var(--bg-color);
-    /* background: linear-gradient(to top, #F6EDE3 10%, 30%, #FFFFFF00 90%); */
+    display: flex;
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
-    display: flex;
+    margin: 10px 10px 0px 10px;
+    width: 95vw;
+    height: auto;
     border-top: 1px dashed var(--text-color2);
+    background-color: var(--bg-color);
+    /* background: linear-gradient(to top, #F6EDE3 10%, 30%, #FFFFFF00 90%); */
 }
 
 .header-item,
