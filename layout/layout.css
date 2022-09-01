@@ -389,7 +389,7 @@ main {
     left: 0;
     bottom: 0;
     margin: 10px 10px 0px 10px;
-    width: 999vw;
+    width: 99vw;
     height: auto;
     border-top: 1px dashed var(--text-color2);
     background-color: var(--bg-color);
