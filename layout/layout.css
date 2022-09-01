@@ -459,6 +459,8 @@ img {
         width: 95vw;
         height: auto;
         margin-bottom: 3rem;
+        border-left: 1px dashed var(--text-color2);
+        border-right: 1px dashed var(--text-color2);
     }
 
     .publicationList {
@@ -471,6 +473,8 @@ img {
         max-width: 95vw;
         height: auto;
         margin-bottom: 3rem;
+        border-left: 1px dashed var(--text-color2);
+        border-right: 1px dashed var(--text-color2);
     }
 
     .title {
