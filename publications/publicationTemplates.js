@@ -31,7 +31,7 @@ const publicationDetailTemplate = Handlebars.compile(`
 </p>
 <br>   
 <ul class="publication-credits">
-    {{#if author}}<li>Author: {{author}}</li>{{/if}}
+    {{#if author}}<li>Author(s): {{author}}</li>{{/if}}
     {{#if designer}}<li>Designer: <a href="{{designerLink}}">{{designer}}</a></li>{{/if}}
     {{#if coverArtist}}<li>Cover artist: <a href="{{coverArtistLink}}">{{coverArtist}}</a></li>{{/if}}
 </ul>
