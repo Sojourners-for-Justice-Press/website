@@ -32,8 +32,8 @@ const publicationDetailTemplate = Handlebars.compile(`
 <ul class="publication-details">
     <li>Category: {{category}}</li>
     <li>Language: {{language}}</li>
-    <li>Publication date: {{date}}</li>
-    <li>Page Count: {{pages}}</li>
+    <li>Date: {{date}}</li>
+    <li>Page count: {{pages}}</li>
     <li>Edition: {{edition}}</li>
     <li>Dimensions: {{dimensions}}</li>
     <li>Process: {{process}}</li>
