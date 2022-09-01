@@ -47,7 +47,7 @@ html {
 body {
     background-color: var(--bg-color);
     border-top: 1px dashed var(--text-color2);
-    border-bottom: 1px dashed var(--text-color2);
+    /* border-bottom: 1px dashed var(--text-color2); */
     margin: 10px;
     font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
     font-size: var(--body-text);
@@ -206,6 +206,7 @@ table {
 
 .sub-index {
     padding: 10px;
+    padding-bottom: 15%;
 }
 
 .blurb {
@@ -224,8 +225,6 @@ table {
 .latest {
     display: flex;
     justify-content: center;
-    border-left: 1px dashed var(--text-color2);
-    border-right: 1px dashed var(--text-color2);
 }
 
 #latest {
@@ -238,6 +237,8 @@ table {
     font-size: var(--latest-text);
     line-height: var(--latest-line-height);
     text-align: center;
+    border: 1px dashed var(--text-color2);
+    border: 1px dashed var(--text-color2);
 }
 
 .latest-item {
@@ -261,7 +262,6 @@ table {
 
 .loading {
     font-size: var(--loading-text);
-    border: 0px !important;
 }
 
 .publicationList {
@@ -379,12 +379,16 @@ img {
     margin-bottom: 2vh;
 }
 
+main {
+    padding-bottom: 15%;
+}
+
 .footer {
-    margin-top: 2%;
-    /* background-color: var(--color4); */
-    position: -webkit-sticky;
-    /* safari */
-    position: sticky;
+    margin: 10px 10px 0px 10px;
+    height: auto;
+    background-color: var(--bg-color);
+    /* background: linear-gradient(to top, #F6EDE3 10%, 30%, #FFFFFF00 90%); */
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -397,6 +401,7 @@ img {
     width: 100%;
     margin: 2vh 2vw;
     justify-content: space-between;
+    flex-direction: column;
 
 }
 
