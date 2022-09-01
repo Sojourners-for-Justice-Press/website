@@ -249,19 +249,17 @@ table {
     justify-content: center;
 }
 
-/* #latest { */
-/* font-family: 'Times Triplex Italic Regular' !important; */
-font-family: 'Courier New',
-Courier,
-Fixed;
-/* font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif; */
-/* text-transform: lowercase;
+#latest {
+    /* font-family: 'Times Triplex Italic Regular' !important; */
+    /* font-family: 'Courier New',  Courier, Fixed; */
+    font-family: 'Futura Simplex Regular', Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
     font-variant: small-caps;
     font-weight: bolder;
     font-size: var(--latest-text);
     line-height: var(--latest-line-height);
     text-align: center;
-} */
+}
 
 .latest-item {
     flex-grow: 2;
