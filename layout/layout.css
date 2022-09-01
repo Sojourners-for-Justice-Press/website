@@ -225,6 +225,8 @@ table {
 .latest {
     display: flex;
     justify-content: center;
+    border-left: 1px dashed var(--text-color2);
+    border-right: 1px dashed var(--text-color2);
 }
 
 #latest {
@@ -237,8 +239,6 @@ table {
     font-size: var(--latest-text);
     line-height: var(--latest-line-height);
     text-align: center;
-    border: 1px dashed var(--text-color2);
-    border: 1px dashed var(--text-color2);
 }
 
 .latest-item {
