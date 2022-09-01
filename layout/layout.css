@@ -452,6 +452,7 @@ img {
     .latest {
         display: flex;
         flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     .latest-item {
@@ -463,6 +464,7 @@ img {
     .publicationList {
         display: flex;
         flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     .publicationDiv {
@@ -484,5 +486,18 @@ img {
 
     .dropdown {
         min-width: 100%;
+    }
+
+    .publicationDetail {
+        z-index: 100;
+        background-color: var(--bg-color);
+        /* position: relative;
+        top: 0;
+        right: 0;
+        display: none;
+        margin: 0;
+        padding: 2rem; */
+        min-width: 100%;
+
     }
 }
