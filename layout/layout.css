@@ -12,7 +12,7 @@
     --logo-text: calc(12px + 0.5vw);
     --latest-text: calc(22px + 0.5vw);
     --latest-line-height: 3;
-    --loading-text: calc(40px + 0.5vw);
+    --loading-text: calc(25px + 0.5vw);
     --header-text: calc(20px + 0.5vw);
     --header2-line-height: 2;
     --body-text: calc(15px + 0.5vw);
@@ -108,9 +108,9 @@ a:active {
 }
 
 
-p a:hover {
+a:hover {
     transition: all 0.5s ease;
-    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
     
 }
 
@@ -272,10 +272,16 @@ hr {
     width: 25vw;
     height: auto;
     margin: 0.5em;
-    border-left: 1px dashed var(--text-color2);
-    border-right: 1px dashed var(--text-color2);
     padding: 1rem;
     
+}
+
+.latest-item:first-child {
+    border-left: 1px dashed var(--text-color2);
+}
+
+.latest-item:last-child {
+    border-right: 1px dashed var(--text-color2);
 }
 
 .latest-item img {
@@ -293,15 +299,11 @@ hr {
     font-size: var(--loading-text);
 }
 
-.loading::after {
-    content: "\2026";
-}
-
 .publicationList,
 .eventList {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     flex-wrap: wrap;
 }
 
@@ -313,9 +315,16 @@ hr {
     max-width: 18vw;
     height: auto;
     margin: 0.5em;
-    border-left: 1px dashed var(--text-color2);
-    border-right: 1px dashed var(--text-color2);
     padding: 1rem;
+}
+
+.publicationDiv:first-child {
+    border-left: 1px dashed var(--text-color2);
+}
+
+.publicationDiv:last-child {
+    border-right: 1px dashed var(--text-color2);
+    
 }
 
 /* inner border */
