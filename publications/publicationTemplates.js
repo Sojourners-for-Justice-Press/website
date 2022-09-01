@@ -18,21 +18,25 @@ const publicationDetailTemplate = Handlebars.compile(`
 {{#if img5}}<img id="publicationImg" src="asset/{{img5}}" alt="{{img5AltText}}"/>{{/if}}
 {{#if img6}}<img id="publicationImg" src="asset/{{img6}}" alt="{{img6AltText}}"/>{{/if}}
 </div>
-<ul class="publication-details">
-    <li>Publication date: {{date}}</li>
-    <li>Page Count: {{pages}}</li>
-    <li>Dimensions: {{dimensions}}</li>
-    <li>Category: {{category}}</li>
-    <li>Price: {{price}}</li>
+<ul class="publication-credits">
+    {{#if author}}<li>Author(s): {{author}}</li>{{/if}}
+    {{#if designer}}<li>Designer: <a href="{{designerLink}}">{{designer}}</a></li>{{/if}}
+    {{#if coverArtist}}<li>Cover artist: <a href="{{coverArtistLink}}">{{coverArtist}}</a></li>{{/if}}
+    {{#if printer}}<li>Printer: <a href="{{printerLink}}">{{printer}}</a></li>{{/if}}
 </ul>
 <a class="button" href="{{purchaseLink}}">{{price}} via Haymarket Books</a> <br>
 <p id="description">
     {{description}}
 </p>
 <br>   
-<ul class="publication-credits">
-    {{#if author}}<li>Author(s): {{author}}</li>{{/if}}
-    {{#if designer}}<li>Designer: <a href="{{designerLink}}">{{designer}}</a></li>{{/if}}
-    {{#if coverArtist}}<li>Cover artist: <a href="{{coverArtistLink}}">{{coverArtist}}</a></li>{{/if}}
+<ul class="publication-details">
+    <li>Category: {{category}}</li>
+    <li>Language: {{language}}</li>
+    <li>Publication date: {{date}}</li>
+    <li>Page Count: {{pages}}</li>
+    <li>Edition: {{edition}}</li>
+    <li>Dimensions: {{dimensions}}</li>
+    <li>Process: {{process}}</li>
+    <li>Cover: {{cover}}</li>
 </ul>
 `)
