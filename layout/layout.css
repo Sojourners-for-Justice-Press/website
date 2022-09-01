@@ -458,12 +458,13 @@ main {
 
     .publicationDetail {
         z-index: 1000;
+        overflow: scroll;
         background-color: var(--bg-color);
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         min-width: 100vw;
-        height: auto;
+        height: 100%;
         border-bottom: 1px dashed var(--text-color2);
     }
 }
