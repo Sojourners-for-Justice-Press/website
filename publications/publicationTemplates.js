@@ -2,7 +2,7 @@ const publicationDiv = Handlebars.compile(`
 <div class="publicationDiv" id="{{urlTitle}}">
 <p><a href="javascript:void(0)" onclick="openPage('{{urlTitle}}')"><span id="title">{{publicationTitle}}</span></a></p>
 <p>by {{author}}</p>
-<img src="../publications/asset/{{img}}" alt="{{imgAltText}}"> <br>
+<a href="javascript:void(0)" onclick="openPage('{{urlTitle}}')"><img src="../publications/asset/{{img}}" alt="{{imgAltText}}"></a> <br>
 </div>
 `)
 const publicationDetailTemplate = Handlebars.compile(`
