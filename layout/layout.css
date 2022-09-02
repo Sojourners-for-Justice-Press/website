@@ -135,6 +135,11 @@ a:hover {
     line-height: var(--publication-card-line-height);
     color: var(--text-color2);
     text-decoration: none;
+    width: 65%;
+}
+
+.lates-item p {
+    width: 65%;
 }
 
 h2 .heading2 {
@@ -247,6 +252,11 @@ table {
     height: auto;
     margin: 0.5em;
     padding: 1rem;
+    border-right: 1px dashed var(--text-color2);
+}
+
+.latest-item:last-child {
+    border-right: 0px !important;
 }
 
 .latest-item img {
@@ -278,12 +288,12 @@ table {
 .publicationDiv, .eventDiv {
     flex-grow: 1;
     flex-basis: 25%;
+    align-items: center;
     max-width: 25vw;;
     height: auto;
     margin: 0.5em;
     padding: 1rem;
 }
-
 
 /* inner border */
 .publicationDiv img {
@@ -297,7 +307,7 @@ table {
 }
 
 .eventDiv img {
-    /* border: 1.125px solid var(--text-color2); */
+    /* border-bottom: 1.125px solid var(--text-color2); */
     padding: 0.5em;
     display: block;
     margin-top: 1.25rem;
