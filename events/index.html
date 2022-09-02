@@ -22,16 +22,37 @@
 <body>
   <header>
     <div class="header">
-      <h1 class="title-tag">
-        <a href="/">Sojourners for Justice Press</a>
-      </h1>
+      <div class="header-item">
+        <h1 class="title-tag">
+          <a href="/">Sojourners for Justice Press</a>
+        </h1>
+      </div>
+
+      <div class="header-item">
+        <div class="button-container">
+          <div class="dropdown">
+            <span class="dropdown-button">
+              Events &nbsp;&nbsp;&nbsp;&nbsp; <span class="arrow"></span>
+            </span>
+
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="/">Index</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/publications">Publications</a></li>
+                <li><a href="/submissions">Submissions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Start of the basic structure of the publications page -->
   <main>
     <div class="eventList">
-      <div id="loadingGif"></div>
+      <div class="loading"></div>
     </div>
   </main>
   <!-- End of the basic structure of the publications page -->
@@ -40,14 +61,15 @@
     <div class="footer">
       <div class="footer-item">
         <ul>
-          <li> <a href="#">Email</a> </li>
-          <li> <a href="#">Issuu</a> </li>
-          <li> <a href="#">Are.na</a> </li>
+          <li><a href="mailto:sojourners4justice@gmail.com">Contact us</a></li>
+          <li><a href="https://ko-fi.com/sojourners4justice">Make a donation</a></li>
+          <li>Follow us on <a href="#">Twitter</a>, <a href="#">Instagram</a> & <a href="#">Are.na</a></li>
         </ul>
       </div>
 
       <div class="footer-item">
-        <p class="copyright">Creative Commons CC BY-NC-SA 4.0</p>
+        <p class="copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons CC
+            BY-NC-SA 4.0</a></p>
       </div>
     </div>
   </footer>
@@ -72,7 +94,6 @@
       $('.eventList').append(eventDiv(events[index]))
     }
   })
-
 </script>
 
 </html>
