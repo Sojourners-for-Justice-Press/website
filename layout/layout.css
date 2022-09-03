@@ -64,10 +64,6 @@ img {
     max-width: 100%;
 }
 
-p {
-    clear: none;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -490,13 +486,13 @@ main {
         margin-bottom: 3rem;
     }
 
-    .publicationList {
+    .publicationList, .eventList {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
     }
 
-    .publicationDiv {
+    .publicationDiv, .eventDiv {
         max-width: 95vw;
         height: auto;
         margin-bottom: 3rem;
