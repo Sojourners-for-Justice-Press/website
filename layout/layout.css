@@ -320,6 +320,12 @@ table {
     max-width: calc(90% + 0.5vw);
 }
 
+.eventImg {
+    max-width: 100% !important;
+    border-radius: calc(10px + 0.5vw);
+
+}
+
 .inlineImg {
     display: inline-flex;
     float: right;
@@ -327,6 +333,7 @@ table {
     height: auto;
     padding: 0.5rem;
     filter: invert(20%) sepia(18%) saturate(449%) hue-rotate(53deg) brightness(105%) contrast(70%);
+    border-radius: calc(10px + 0.5vw);
 }
 
 .inlineImgLeft {
@@ -337,6 +344,7 @@ table {
     padding: 0.5rem;
     padding-right: 2rem;
     filter: invert(20%) sepia(18%) saturate(449%) hue-rotate(53deg) brightness(105%) contrast(70%);
+    border-radius: calc(10px + 0.5vw);
 }
 
 figcaption {
@@ -437,7 +445,7 @@ img {
 }
 
 main {
-    padding-bottom: 25%;
+    padding-bottom: 40%;
 }
 
 .footer {
