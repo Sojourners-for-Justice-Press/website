@@ -323,7 +323,7 @@ table {
 .inlineImg {
     display: inline-flex;
     float: right;
-    max-width: 15%;
+    max-width: 25%;
     height: auto;
     padding: 0.5rem;
     filter: invert(20%) sepia(18%) saturate(449%) hue-rotate(53deg) brightness(105%) contrast(70%);
@@ -332,7 +332,7 @@ table {
 .inlineImgLeft {
     display: inline-flex;
     float: left;
-    width: 30%;
+    width: 25%;
     height: auto;
     padding: 0.5rem;
     padding-right: 2rem;
