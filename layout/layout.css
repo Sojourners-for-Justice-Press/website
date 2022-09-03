@@ -236,6 +236,14 @@ table {
     border-right: 1px dashed var(--text-color2);
 }
 
+.latest:first-child {
+    border-left: 0px !important;
+}
+
+.latest:last-child {
+    border-right: 0px !important;
+}
+
 #latest {
     /* font-family: 'Times Triplex Italic Regular' !important; */
     /* font-family: 'Courier New',  Courier, Fixed; */
