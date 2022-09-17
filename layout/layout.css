@@ -92,30 +92,25 @@ a:hover {
     font-weight: bold;
 }
 
-.date {
-    font-family: 'Courier New', Courier, fixed !important;
-    font-size: var(--date-text);
-    color: var(--text-color2);
-    float: right;
-    padding: 1%;
-}
-
-.logo {
-    font-family: 'Courier New', Courier, monospace !important;
-    color: var(--color6);
-    font-size: var(--logo-text);
-    position: relative;
-    top: 1vw;
-    left: -1vw;
-}
-
-.mural {
+.header-content {
     display: flex;
+    justify-content: space-between;
 }
+
+
+.header-item:nth-of-type(2) { flex-grow: 2; }
 
 .title {
-    margin: 5rem 5rem 0;
+    margin: 0.5rem 0.5rem 0;
+    width: 100%;
 }
+
+.blurb {
+    margin: 0 0.5rem 0;
+    padding-bottom: 5vh;
+    width: 125%;
+}
+
 
 .title-tag h1 {
     /* Sojourners for Justice Press */
@@ -139,7 +134,7 @@ a:hover {
     width: 65%;
 }
 
-.lates-item p {
+.latest-item p {
     width: 65%;
 }
 
@@ -214,19 +209,6 @@ table {
 .sub-index {
     padding: 10px;
     padding-bottom: 35%;
-}
-
-.blurb {
-    margin: 0 5rem 0;
-    padding-bottom: 5vh;
-}
-
-.mural-img {
-    flex-grow: 2;
-}
-
-.mural-item {
-    width: 50%;
 }
 
 .latest {
@@ -490,6 +472,22 @@ main {
     text-align: right;
 }
 
+.logo {
+    font-family: Courier, monospace;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 10%;
+}
+
+.logo sub {
+    font-size: var(--body-text);
+}
+
+
 @media only screen and (max-width: 600px) {
 
     .latest {
@@ -548,5 +546,9 @@ main {
 
     .footer-item:last-child {
         display: none;
+    }
+
+    .logo img {
+        width: 50%;
     }
 }
