@@ -6,7 +6,11 @@ for (let i = 0, linksLength = links.length; i < linksLength; i += 1) {
    } 
 }
 
-var sentences = ['I sell the shadow to support the substance...','I sell the shadow to support the substance...'],
+var sentences = [
+    'I sell the shadow to support the substance...',
+    'I am going to keep on stinging till I arouse the conscience of America.',
+    'The name has come. Sojourner, that is it. Because I am going to travel up and down the country showing the people their sins and being a sign onto them.'
+],
             part,
             i = 0,
             offset = 0,
