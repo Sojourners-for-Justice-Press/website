@@ -553,7 +553,6 @@ main {
     }
 }
 
-.selector:not(*:root) { .logo img {display: none;} }
-@supports (-webkit-appearance:none) {}
-.selector { (;.logo img {display: none;}); }
-.selector { [;.logo img {display: none;}]; }
+.safari .safariSpecific {
+    display: none;
+  }
