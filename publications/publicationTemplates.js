@@ -30,13 +30,13 @@ const publicationDetailTemplate = Handlebars.compile(`
     {{#if coverArtist}}<li>Cover artist: <a href="{{coverArtistLink}}">{{coverArtist}}</a></li>{{/if}}
     {{#if printer}}<li>Printer: <a href="{{printerLink}}">{{printer}}</a></li>{{/if}}
     {{#if readLink}}<li>Digital version: <a href="{{readLink}}">Accessible via {{readLinkTitle}}</a></li>{{/if}}
-    <li>Category: {{category}}</li>
-    <li>Language: {{language}}</li>
-    <li>Date: {{date}}</li>
-    <li>Edition: {{edition}}</li>
-    <li>Page count: {{pages}}</li>
-    <li>Dimensions: {{dimensions}}</li>
-    <li>Process: {{process}}</li>
-    <li>Cover: {{cover}}</li>
+    {{#if category}}<li>Category: {{category}}</li>{{/if}}
+    {{#if language}}<li>Language: {{language}}</li>{{/if}}
+    {{#if date}}<li>Date: {{date}}</li>{{/if}}
+    {{#if edition}}<li>Edition: {{edition}}</li>{{/if}}
+    {{#if pages}}<li>Page count: {{pages}}</li>{{/if}}
+    {{#if dimensions}}<li>Dimensions: {{dimensions}}</li>{{/if}}
+    {{#if process}}<li>Process: {{process}}</li>{{/if}}
+    {{#if cover}}<li>Cover: {{cover}}</li>{{/if}}
 </ul>
 `)
