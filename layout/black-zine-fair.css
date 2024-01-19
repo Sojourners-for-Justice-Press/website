@@ -55,6 +55,7 @@ body {
     background-color: var(--bg-color);
     border-top: 0px;
     color: var(--text-color);
+    text-rendering: optimizeLegibility;
     font-size: var(--body-text);
     letter-spacing: 0.05em;
     -webkit-text-stroke: 0.75px var(--text-color);
@@ -126,6 +127,7 @@ a:link,
 a:visited,
 a:hover,
 a:active {
+    color: var(--bg-color);
     text-decoration: none;
 }
 
