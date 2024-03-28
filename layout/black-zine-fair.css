@@ -149,6 +149,11 @@ p a:link {
     line-height: 100%;
 }
 
+p a:visited {
+    color: var(--bg-color); 
+    -webkit-text-stroke-color: var(--bg-color);
+}
+
 li a {
     color: var(--text-color);
     -webkit-text-stroke-color: var(--text-color);
@@ -192,13 +197,9 @@ ol {
     margin-left: 0;
 }
 
-sub-index {
-    margin: 5%;
+.content {
+    margin: 5% !important; 
 }
-
-/* .sub-index p {
-    margin-bottom: 5%;
-} */
 
 .row {
     display: flex;
