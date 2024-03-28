@@ -7,8 +7,8 @@
 
 @font-face {
     font-family: 'Tiny';
-    src: 
-    url('asset/font/Tiny/TINY5x3GX.ttf') format('woff');
+    src:
+        url('asset/font/Tiny/TINY5x3GX.ttf') format('woff');
     font-weight: 100 120 140 160 180 200;
     font-display: swap;
 }
@@ -23,39 +23,39 @@
 @keyframes bleed {
     0% {
         font-variation-settings: "wght" 120;
-     }
+    }
 
-     12.5% {
+    12.5% {
         font-variation-settings: "wght" 140;
-     }
-       
-     25% {
-      font-variation-settings: "wght" 160;
-     } 
-     
-    37.5% {
-       font-variation-settings: "wght" 180;
-     } 
+    }
 
-     50% {
-        font-variation-settings: "wght" 200;
-      } 
-     
-     62.5% {
-       font-variation-settings: "wght" 180;
-     } 
-     
-     75% {
+    25% {
         font-variation-settings: "wght" 160;
-     }
+    }
 
-     87.5% {
-       font-variation-settings: "wght" 140;
-     }
+    37.5% {
+        font-variation-settings: "wght" 180;
+    }
 
-     100% {
+    50% {
+        font-variation-settings: "wght" 200;
+    }
+
+    62.5% {
+        font-variation-settings: "wght" 180;
+    }
+
+    75% {
+        font-variation-settings: "wght" 160;
+    }
+
+    87.5% {
+        font-variation-settings: "wght" 140;
+    }
+
+    100% {
         font-variation-settings: "wght" 120;
-      }
+    }
 }
 
 *,
@@ -82,7 +82,7 @@ body {
     font-size: var(--body-text);
     letter-spacing: 0.05em;
     -webkit-text-stroke: 1px var(--text-color);
-    scrollbar-color: var(--text-color);   
+    scrollbar-color: var(--text-color);
 }
 
 .black-zine-fair {
@@ -105,7 +105,7 @@ body {
 .fair-button {
     background-color: var(--bg-color);
     color: var(--text-color) !important;
-    -webkit-text-stroke: 2px var(--text-color)!important;
+    -webkit-text-stroke: 2px var(--text-color) !important;
     border: 5px solid;
     border-radius: 70%;
     font-size: calc(50px + 0.5vw);
@@ -113,7 +113,8 @@ body {
     padding: 3%;
     display: inline-block;
     position: absolute;
-    top: 35vh; right: 5%;
+    top: 35vh;
+    right: 5%;
     transform: rotate(10.7deg);
 }
 
@@ -123,7 +124,8 @@ body {
     line-height: 10%;
 }
 
-h2, .heading2 {
+h2,
+.heading2 {
     /* text-transform: uppercase; */
     line-height: 110%;
 }
@@ -131,8 +133,8 @@ h2, .heading2 {
 p {
     text-align: justify;
     text-justify: inter-word;
-    -webkit-text-stroke: 1px var(--text-color)!important;
-    
+    -webkit-text-stroke: 1px var(--text-color) !important;
+
 }
 
 hr {
@@ -142,7 +144,7 @@ hr {
 
 p a:link {
     padding: 0.5%;
-    color: var(--bg-color); 
+    color: var(--bg-color);
     -webkit-text-stroke: 0.75px var(--bg-color);
     background-color: var(--text-color);
     border-radius: calc(20px + 0.5vw);
@@ -150,7 +152,7 @@ p a:link {
 }
 
 p a:visited {
-    color: var(--bg-color); 
+    color: var(--bg-color);
     -webkit-text-stroke-color: var(--bg-color);
 }
 
@@ -177,6 +179,10 @@ a:hover {
     font-weight: bold;
 }
 
+marquee {
+    height: 100%;
+}
+
 ol {
     margin-left: 1em;
     margin-top: 0;
@@ -198,7 +204,7 @@ ol {
 }
 
 .content {
-    margin: 5% !important; 
+    margin: 5% !important;
 }
 
 .row {
@@ -233,8 +239,8 @@ ol {
 }
 
 .footer {
-    background: rgb(143,120,99);
-    background: linear-gradient(180deg, rgba(143,120,99,0) 0%, rgba(143,120,99,1) 46%);
+    background: rgb(143, 120, 99);
+    background: linear-gradient(180deg, rgba(143, 120, 99, 0) 0%, rgba(143, 120, 99, 1) 46%);
     height: 30%;
     display: flex;
     flex-wrap: wrap;
