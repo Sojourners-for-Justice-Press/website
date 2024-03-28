@@ -221,6 +221,7 @@ ol {
     width: 25%;
     height: auto;
     border-radius: calc(10px + 0.5vw);
+    margin-top: 2.5%;
     margin-left: 2.5%;
     filter: grayscale(var(--value, 100%));
 }
