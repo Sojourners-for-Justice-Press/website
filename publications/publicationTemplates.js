@@ -19,7 +19,7 @@ const publicationDetailTemplate = Handlebars.compile(`
 {{#if img6}}<img id="publicationImg" src="asset/{{img6}}" alt="{{img6AltText}}"/>{{/if}}
 </div>
 
-<a class="button" href="{{purchaseLink}}">{{price}} via Haymarket Books</a> <br>
+<a class="button" href="{{purchaseLink}}">{{price}}</a> <br>
 <p id="description">
     {{description}}
 </p>
